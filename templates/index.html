@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Prueba ISW Hackaton</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
-</head>
-<body class="bg-gray-50">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-green-600">TuEmpresa</h1>
-            <ul class="flex gap-6 text-gray-700">
-                <li><a href="/" class="hover:text-green-600 transition">Inicio</a></li>
-                <li><a href="/servicios" class="hover:text-green-600 transition">Servicios</a></li>
-                <li><a href="/nosotros" class="hover:text-green-600 transition">Nosotros</a></li>
-                <li><a href="/contacto" class="hover:text-green-600 transition">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
+{% block title %}Inicio - Prueba ISW Hackaton{% endblock %}
+
+{% block content %}
     <!-- Banner Principal -->
     <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-20 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Bienvenido a Nuestro Sitio</h2>
             <p class="text-lg md:text-xl text-green-100 mb-8">Soluciones innovadoras para tu negocio</p>
-            <a href="/contacto" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+            <a href="/contacto" class="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block hover:scale-105 duration-200">
                 Contáctanos Ahora
             </a>
         </div>
@@ -44,8 +27,21 @@
                     Con años de experiencia en la industria, hemos ayudado a cientos de clientes a alcanzar sus metas.
                 </p>
             </div>
-            <div class="bg-gray-300 rounded-lg h-64 flex items-center justify-center">
-                <span class="text-gray-500 text-xl">Imagen de empresa</span>
+            <!-- Imagen de empresa reemplazada con componente premium -->
+            <div class="relative overflow-hidden rounded-2xl bg-gradient-to-tr from-green-500 to-emerald-800 p-8 text-white shadow-xl h-64 flex flex-col justify-between group">
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 bg-white/10 rounded-full blur-xl group-hover:scale-110 transition-transform duration-500"></div>
+                <div class="flex justify-between items-start">
+                    <div class="bg-white/20 p-3 rounded-lg backdrop-blur-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full backdrop-blur-md">Innovación</span>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-1">Tecnología Inteligente</h4>
+                    <p class="text-green-100 text-sm">Impulsando la transformación digital de tu negocio con soluciones ágiles y modernas.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -93,31 +89,31 @@
                     <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                         <span class="text-2xl">🚀</span>
                     </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Servicio 1</h4>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Mantenimiento Preventivo</h4>
                     <p class="text-gray-600">
-                        Descripción breve de nuestro primer servicio destacado y cómo puede beneficiarte.
+                        Revisiones y actualizaciones periódicas para mantener tu infraestructura funcionando de manera estable y continua.
                     </p>
                 </div>
 
                 <!-- Servicio 2 -->
                 <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-lg hover:scale-105 transition-all" data-animate-card>
                     <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                        <span class="text-2xl">💡</span>
+                        <span class="text-2xl">🧹</span>
                     </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Servicio 2</h4>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Limpieza Física</h4>
                     <p class="text-gray-600">
-                        Descripción breve de nuestro segundo servicio destacado y cómo puede beneficiarte.
+                        Mantenimiento a nivel físico de equipos para evitar sobrecalentamientos y prolongar la vida útil de tus componentes.
                     </p>
                 </div>
 
                 <!-- Servicio 3 -->
                 <div class="bg-white rounded-lg shadow-md p-8 hover:shadow-lg hover:scale-105 transition-all" data-animate-card>
                     <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                        <span class="text-2xl">⭐</span>
+                        <span class="text-2xl">⚡</span>
                     </div>
-                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Servicio 3</h4>
+                    <h4 class="text-xl font-semibold text-gray-900 mb-3">Optimización de Sistemas</h4>
                     <p class="text-gray-600">
-                        Descripción breve de nuestro tercer servicio destacado y cómo puede beneficiarte.
+                        Configuraciones avanzadas y reportes detallados para que tu sistema trabaje a la máxima velocidad posible.
                     </p>
                 </div>
             </div>
@@ -131,21 +127,13 @@
             <p class="text-lg text-green-100 mb-8">
                 Ponte en contacto con nosotros hoy mismo y descubre cómo podemos ayudarte
             </p>
-            <a href="/contacto" class="bg-blue-600 text-white px-10 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-all inline-block">
+            <a href="/contacto" class="bg-blue-600 text-white px-10 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-all inline-block hover:scale-105 duration-200">
                 Solicitar Información
             </a>
         </div>
     </section>
+{% endblock %}
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
-        <div class="max-w-6xl mx-auto text-center">
-            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block scripts %}
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
-</body>
-</html>
+{% endblock %}

@@ -42,7 +42,7 @@ def contacto():
 
         # Validar que todos los campos estén completos
         if not all([nombre, correo, telefono, servicio, mensaje]):
-            return jsonify({'error': 'Todos los campos son requeridos'}), 400
+            return render_template('contacto.html', error='Todos los campos son requeridos')
 
         # Guardar en la base de datos
         connection = get_db_connection()
@@ -62,7 +62,12 @@ def contacto():
             
             except Error as e:
                 print(f"Error al guardar cliente: {e}")
-                return render_template('contacto.html', error=f"Error al guardar: {str(e)}")
+                # Manejar de forma segura errores específicos (ej: entrada duplicada de correo)
+                if e.errno == 1062:
+                    error_msg = "El correo electrónico ya se encuentra registrado."
+                else:
+                    error_msg = "Ocurrió un error al procesar tu solicitud. Por favor, inténtalo de nuevo más tarde."
+                return render_template('contacto.html', error=error_msg)
             
             finally:
                 if connection.is_connected():

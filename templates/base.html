@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-green-600 hover:scale-105 transition-transform duration-200">TuEmpresa</a>
+            <ul class="flex gap-6 text-gray-700">
+                <li>
+                    <a href="/" class="{% if request.path == '/' %}text-green-600 font-bold border-b-2 border-green-600 pb-1{% else %}hover:text-green-600 transition{% endif %}">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="/servicios" class="{% if request.path == '/servicios' %}text-green-600 font-bold border-b-2 border-green-600 pb-1{% else %}hover:text-green-600 transition{% endif %}">
+                        Servicios
+                    </a>
+                </li>
+                <li>
+                    <a href="/nosotros" class="{% if request.path == '/nosotros' %}text-green-600 font-bold border-b-2 border-green-600 pb-1{% else %}hover:text-green-600 transition{% endif %}">
+                        Nosotros
+                    </a>
+                </li>
+                <li>
+                    <a href="/contacto" class="{% if request.path == '/contacto' %}text-green-600 font-bold border-b-2 border-green-600 pb-1{% else %}hover:text-green-600 transition{% endif %}">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 px-4 mt-auto">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

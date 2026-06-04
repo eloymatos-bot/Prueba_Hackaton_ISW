@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
-</head>
-<body class="bg-gray-50">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-green-600">TuEmpresa</h1>
-            <ul class="flex gap-6 text-gray-700">
-                <li><a href="/" class="hover:text-green-600 transition">Inicio</a></li>
-                <li><a href="/servicios" class="hover:text-green-600 transition">Servicios</a></li>
-                <li><a href="/nosotros" class="hover:text-green-600 transition">Nosotros</a></li>
-                <li><a href="/contacto" class="hover:text-green-600 transition">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+{% extends "base.html" %}
 
+{% block title %}Servicios - Prueba ISW Hackaton{% endblock %}
+
+{% block content %}
     <!-- Header -->
     <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-16 px-4">
         <div class="max-w-6xl mx-auto text-center">
@@ -42,7 +25,7 @@
     <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Servicio 1: Mantenimiento Preventivo -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105 duration-200">
                 <div class="bg-gradient-to-r from-green-500 to-green-600 h-48 flex items-center justify-center">
                     <span class="text-7xl">🔧</span>
                 </div>
@@ -54,23 +37,23 @@
                     </p>
                     <ul class="mb-6 space-y-2 text-sm text-gray-600">
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Revisiones mensuales
+                            <span class="text-green-600 font-bold">✓</span> Revisiones mensuales
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Actualizaciones de software
+                            <span class="text-green-600 font-bold">✓</span> Actualizaciones de software
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Monitoreo 24/7
+                            <span class="text-green-600 font-bold">✓</span> Monitoreo 24/7
                         </li>
                     </ul>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-800 transition-all font-semibold">
+                    <a href="/contacto" class="block w-full bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-800 transition-all font-semibold">
                         Más Información
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Servicio 2: Limpieza Física -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105 duration-200">
                 <div class="bg-gradient-to-r from-blue-500 to-blue-600 h-48 flex items-center justify-center">
                     <span class="text-7xl">🧹</span>
                 </div>
@@ -82,23 +65,23 @@
                     </p>
                     <ul class="mb-6 space-y-2 text-sm text-gray-600">
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Limpieza de equipos
+                            <span class="text-green-600 font-bold">✓</span> Limpieza de equipos
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Organización de cables
+                            <span class="text-green-600 font-bold">✓</span> Organización de cables
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Control de temperatura
+                            <span class="text-green-600 font-bold">✓</span> Control de temperatura
                         </li>
                     </ul>
-                    <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-800 transition-all font-semibold">
+                    <a href="/contacto" class="block w-full bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-800 transition-all font-semibold">
                         Más Información
-                    </button>
+                    </a>
                 </div>
             </div>
 
             <!-- Servicio 3: Optimización del Sistema -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:scale-105 duration-200">
                 <div class="bg-gradient-to-r from-purple-500 to-purple-600 h-48 flex items-center justify-center">
                     <span class="text-7xl">⚡</span>
                 </div>
@@ -110,18 +93,18 @@
                     </p>
                     <ul class="mb-6 space-y-2 text-sm text-gray-600">
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Análisis de rendimiento
+                            <span class="text-green-600 font-bold">✓</span> Análisis de rendimiento
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Ajuste de configuración
+                            <span class="text-green-600 font-bold">✓</span> Ajuste de configuración
                         </li>
                         <li class="flex items-center gap-2">
-                            <span class="text-green-600">✓</span> Reportes detallados
+                            <span class="text-green-600 font-bold">✓</span> Reportes detallados
                         </li>
                     </ul>
-                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition font-semibold">
+                    <a href="/contacto" class="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition font-semibold">
                         Más Información
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -135,48 +118,54 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Plan Básico -->
-                <div class="border-2 border-gray-300 rounded-lg p-8 text-center hover:border-green-600 transition">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Plan Básico</h4>
-                    <p class="text-3xl font-bold text-green-600 mb-4">$99<span class="text-lg">/mes</span></p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li>✓ 1 revisión mensual</li>
-                        <li>✓ Soporte por email</li>
-                        <li>✓ Reportes básicos</li>
-                    </ul>
-                    <button class="w-full border-2 border-green-600 text-green-600 py-2 rounded-lg hover:bg-green-50 transition font-semibold">
+                <div class="border-2 border-gray-300 rounded-lg p-8 text-center hover:border-green-600 transition flex flex-col justify-between hover:shadow-lg duration-200">
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Plan Básico</h4>
+                        <p class="text-3xl font-bold text-green-600 mb-4">$99<span class="text-lg text-gray-500">/mes</span></p>
+                        <ul class="text-gray-600 mb-6 space-y-2 text-left inline-block">
+                            <li>✓ 1 revisión mensual</li>
+                            <li>✓ Soporte por email</li>
+                            <li>✓ Reportes básicos</li>
+                        </ul>
+                    </div>
+                    <a href="/contacto" class="block w-full border-2 border-green-600 text-green-600 text-center py-2 rounded-lg hover:bg-green-50 transition font-semibold">
                         Seleccionar
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Plan Profesional -->
-                <div class="border-2 border-green-600 rounded-lg p-8 text-center shadow-lg">
-                    <div class="bg-green-600 text-white py-2 px-4 rounded-full inline-block mb-4 text-sm font-bold">
+                <div class="border-2 border-green-600 rounded-lg p-8 text-center shadow-lg flex flex-col justify-between relative overflow-hidden hover:shadow-xl duration-200">
+                    <div class="absolute top-0 right-0 bg-green-600 text-white py-1 px-4 text-xs font-bold uppercase tracking-wider rounded-bl-lg">
                         Recomendado
                     </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Plan Profesional</h4>
-                    <p class="text-3xl font-bold text-green-600 mb-4">$199<span class="text-lg">/mes</span></p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li>✓ 2 revisiones mensuales</li>
-                        <li>✓ Soporte 24/7</li>
-                        <li>✓ Reportes detallados</li>
-                    </ul>
-                    <button class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition font-semibold">
+                    <div class="mt-4">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Plan Profesional</h4>
+                        <p class="text-3xl font-bold text-green-600 mb-4">$199<span class="text-lg text-gray-500">/mes</span></p>
+                        <ul class="text-gray-600 mb-6 space-y-2 text-left inline-block">
+                            <li>✓ 2 revisiones mensuales</li>
+                            <li>✓ Soporte 24/7</li>
+                            <li>✓ Reportes detallados</li>
+                        </ul>
+                    </div>
+                    <a href="/contacto" class="block w-full bg-green-600 text-white text-center py-2 rounded-lg hover:bg-green-700 transition font-semibold">
                         Seleccionar
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Plan Empresarial -->
-                <div class="border-2 border-gray-300 rounded-lg p-8 text-center hover:border-green-600 transition">
-                    <h4 class="text-xl font-bold text-gray-900 mb-2">Plan Empresarial</h4>
-                    <p class="text-3xl font-bold text-green-600 mb-4">$399<span class="text-lg">/mes</span></p>
-                    <ul class="text-gray-600 mb-6 space-y-2">
-                        <li>✓ Revisiones semanales</li>
-                        <li>✓ Soporte premium 24/7</li>
-                        <li>✓ Reportes personalizados</li>
-                    </ul>
-                    <button class="w-full border-2 border-green-600 text-green-600 py-2 rounded-lg hover:bg-green-50 transition font-semibold">
+                <div class="border-2 border-gray-300 rounded-lg p-8 text-center hover:border-green-600 transition flex flex-col justify-between hover:shadow-lg duration-200">
+                    <div>
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Plan Empresarial</h4>
+                        <p class="text-3xl font-bold text-green-600 mb-4">$399<span class="text-lg text-gray-500">/mes</span></p>
+                        <ul class="text-gray-600 mb-6 space-y-2 text-left inline-block">
+                            <li>✓ Revisiones semanales</li>
+                            <li>✓ Soporte premium 24/7</li>
+                            <li>✓ Reportes personalizados</li>
+                        </ul>
+                    </div>
+                    <a href="/contacto" class="block w-full border-2 border-green-600 text-green-600 text-center py-2 rounded-lg hover:bg-green-50 transition font-semibold">
                         Seleccionar
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -189,18 +178,9 @@
             <p class="text-lg text-green-100 mb-8">
                 Contáctanos para conocer más sobre nuestros servicios y obtener una cotización
             </p>
-            <a href="/contacto" class="bg-white text-green-600 px-10 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+            <a href="/contacto" class="bg-white text-green-600 px-10 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block hover:scale-105 duration-200">
                 Solicitar Cotización
             </a>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
-        <div class="max-w-6xl mx-auto text-center">
-            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script></body>
-</html>
+{% endblock %}
