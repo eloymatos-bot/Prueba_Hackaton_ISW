@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-green-600">TuEmpresa</h1>
+            <ul class="flex gap-6 text-gray-700">
+                <li><a href="/" class="hover:text-green-600 transition">Inicio</a></li>
+                <li><a href="/servicios" class="hover:text-green-600 transition">Servicios</a></li>
+                <li><a href="/nosotros" class="hover:text-green-600 transition">Nosotros</a></li>
+                <li><a href="/contacto" class="hover:text-green-600 transition">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Quiénes Somos</h2>
+            <p class="text-lg text-green-100">Conoce más sobre nuestra empresa y nuestro equipo</p>
+        </div>
+    </section>
+
+    <!-- Misión, Visión, Valores -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid md:grid-cols-3 gap-8 mb-20">
+            <!-- Misión -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-600">
+                <div class="text-4xl mb-4">🎯</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Misión</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Proporcionar soluciones innovadoras y de calidad que transformen el negocio de nuestros clientes, 
+                    comprometiéndonos con la excelencia en cada proyecto.
+                </p>
+            </div>
+
+            <!-- Visión -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
+                <div class="text-4xl mb-4">🚀</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Visión</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Ser la empresa líder en soluciones digitales, reconocida por nuestro compromiso con la 
+                    innovación, la calidad y la satisfacción del cliente.
+                </p>
+            </div>
+
+            <!-- Valores -->
+            <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-700">
+                <div class="text-4xl mb-4">⭐</div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Valores</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Integridad, Excelencia, Innovación, Trabajo en equipo y Responsabilidad con nuestros 
+                    clientes y la comunidad.
+                </p>
+            </div>
+        </div>
+
+        <!-- Valores detallados -->
+        <div class="bg-gray-100 rounded-lg p-12 mb-20">
+            <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Nuestros Valores Fundamentales</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Integridad</h4>
+                        <p class="text-gray-600">Actuamos siempre con honestidad y transparencia en todas nuestras relaciones.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Excelencia</h4>
+                        <p class="text-gray-600">Nos esforzamos por entregar lo mejor en cada aspecto de nuestro trabajo.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Innovación</h4>
+                        <p class="text-gray-600">Buscamos constantemente nuevas formas de mejorar y evolucionar.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="text-3xl">✓</div>
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Trabajo en Equipo</h4>
+                        <p class="text-gray-600">Creemos en la colaboración y el apoyo mutuo para lograr objetivos comunes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Técnico -->
+    <section class="bg-white py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4 text-center">Nuestro Equipo Técnico</h3>
+            <p class="text-gray-600 text-center mb-12 text-lg">Profesionales apasionados comprometidos con la excelencia</p>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Miembro 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all hover:scale-105">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-32 flex items-center justify-center">
+                        <span class="text-6xl">👨‍💻</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Juan García</h4>
+                        <p class="text-green-600 font-medium mb-3">Lead Developer</p>
+                        <p class="text-gray-600 text-sm">
+                            Especialista en desarrollo backend con 8 años de experiencia en Python y Flask.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Miembro 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all hover:scale-105">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-32 flex items-center justify-center">
+                        <span class="text-6xl">👩‍💻</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">María López</h4>
+                        <p class="text-green-600 font-medium mb-3">Frontend Developer</p>
+                        <p class="text-gray-600 text-sm">
+                            Experta en diseño responsive y desarrollo frontend con React y Tailwind CSS.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Miembro 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all hover:scale-105">
+                    <div class="bg-gradient-to-r from-green-500 to-green-600 h-32 flex items-center justify-center">
+                        <span class="text-6xl">👨‍🔧</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Carlos Rodríguez</h4>
+                        <p class="text-green-600 font-medium mb-3">DevOps Engineer</p>
+                        <p class="text-gray-600 text-sm">
+                            Especialista en infraestructura en AWS y despliegue continuo con Docker y Kubernetes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-green-600 text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-3xl font-bold mb-4">¿Quieres unirte a nuestro equipo?</h3>
+            <p class="text-lg text-green-100 mb-8">
+                Estamos siempre en busca de talento para crecer juntos
+            </p>
+            <a href="/contacto" class="bg-white text-green-600 px-10 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block">
+                Enviar Currículum
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script></body>
+</html>
