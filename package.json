@@ -1,0 +1,20 @@
+{
+  "name": "proyecto-web-ec2-01",
+  "version": "1.0.0",
+  "description": "Servidor web con Flask que se comunica con MySQL",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py",
+    "dev": "python app.py",
+    "css:build": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css",
+    "css:watch": "tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch"
+  },
+  "keywords": ["Flask", "MySQL", "Web"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.24",
+    "autoprefixer": "^10.4.14"
+  }
+}
